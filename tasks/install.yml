@@ -78,6 +78,7 @@
 
 - name: check if PromDash is running
   shell: ps -def|grep thin | grep -v grep
+  ignore_errors: yes
   register: promdash_running
 
 - name: run PromDash
